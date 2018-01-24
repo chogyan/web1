@@ -2,20 +2,58 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <script>
+    function setColor(color){
+      var listt = document.querySelectorAll('a');
+      var a = 0;
+      while(a < listt.length){
+        listt[a].style.color = color;
+        a = a + 1;
+      }
+    }
+    function bodysC(color){
+    document.querySelector('body').style.color = color;
+    }
+    function sB(color){
+    document.querySelector('body').style.background = color;
+    }
+function ndh(self){
+  var target = document.querySelector('body');
+  if(self.value==='night'){
+   sB('black');
+    bodysC('white');
+    self.value = 'day';
+
+  setColor('red');
+  }else{
+    sB('white');
+    bodysC('black');
+    self.value = 'night';
+
+  setColor('blue');
+  }
+}
+    </script>
+    <div id="grid">
+    <link rel="stylesheet" href="style.css">
     <title>let's study with javascript!!!</title>
   </head>
   <body>
 <h1><a href="index.html">WEB</a></h1>
+<input type="button" value="night" onclick="
+  ndh(self);
+">
+<div id="grid">
     <ol>
-      
+
       <li> <a href="1.html">HTML</a></li>
       <li> <a href="2.html">CSS</a></li>
       <li> <a href="3.html">JavaScript</a></li>
     </ol>
+    <div id="article">
 
-  </body>
   <h2>JavaScript</h2>
-  <p>JavaScript)는 객체 기반의 스크립트 프로그래밍 언어이다.
+  <p>JavaScript는 객체 기반의 스크립트 프로그래밍 언어이다.
      이 언어는 웹브라우저 내에서 주로 사용하며,
       다른 응용 프로그램의 내장 객체에도 접근할 수 있는
        기능을 가지고 있다. 또한 Node.js와 같은 런타임 환경과
@@ -31,5 +69,10 @@
            모두 C 언어의 기본 구문을 바탕했기 때문이고, 자바와
            자바스크립트는 직접적인 관련성이 없다. 이름과 구문 외에는
             자바보다 셀프와 유사성이 많다.
--출처 위키백과-
+-출처 위키백과-6:30분 까지
+</div>
+</div>
+
+</body>
+
 </html>
